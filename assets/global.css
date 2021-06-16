@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.greyBorder {
+  border-bottom: 1px solid lightgrey;
+}
+
+@font-face {
+  font-family: 'archivo_narrowbold';
+  src: url('/assets/fonts/archivonarrow-bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: font-awesome-custom;
+  src: url(/assets/fonts/font-awesome-custom.woff?v=1) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,12 @@
+@use "sass:map";
+@import 'assets/mixins';
+@import 'assets/variables';
+
+.HeaderLinks {
+    &__content {
+        width: map.get($container-max-widths, md);
+        @include adaptive(xl) {
+            width: map.get($container-max-widths, xl);
+        }
+    }
+}
