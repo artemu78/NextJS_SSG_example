@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import HeaderHelp from 'src/components/HeaderHelp/HeaderHelp'
-import HeaderMenu from 'src/components/HeaderMenu/HeaderMenu'
-import HeaderGroups from 'src/components/HeaderGroups/HeaderGroups'
-import HeaderLinks from 'src/components/HeaderLinks/HeaderLinks'
-import HeaderInfo from 'src/components/HeaderInfo/HeaderInfo'
-import styles from './styles.module.scss'
+import Head from "next/head";
+import Link from "next/link";
+import HeaderHelp from "src/components/HeaderHelp/HeaderHelp";
+import HeaderMenu from "src/components/HeaderMenu/HeaderMenu";
+import HeaderGroups from "src/components/HeaderGroups/HeaderGroups";
+import HeaderLinks from "src/components/HeaderLinks/HeaderLinks";
+import HeaderInfo from "src/components/HeaderInfo/HeaderInfo";
+import styles from "./styles.module.scss";
 
 export default function Home() {
   const productsList = new Array(20).fill(0, 0, 20).map((item, i) => {
@@ -15,17 +15,17 @@ export default function Home() {
           Product {i + 1}
         </div>
       </Link>
-    )
-  })
-  const brandsList = new Array(20).fill(0, 0, 20).map((item, i) => {
+    );
+  });
+  const brandsList = new Array(30).fill(0, 0, 30).map((item, i) => {
     return (
       <Link key={i} href={`/b/${i + 1}`}>
         <div key={i} className={styles.MainPage__brand}>
           Brand {i + 1}
         </div>
       </Link>
-    )
-  })
+    );
+  });
   return (
     <div>
       <Head>
@@ -56,5 +56,5 @@ export default function Home() {
       <footer></footer>
       {/* <div className={styles.MainPage__overlay} /> */}
     </div>
-  )
+  );
 }
