@@ -5,11 +5,20 @@ import HeaderMenu from "src/components/HeaderMenu/HeaderMenu";
 import HeaderGroups from "src/components/HeaderGroups/HeaderGroups";
 import HeaderLinks from "src/components/HeaderLinks/HeaderLinks";
 import HeaderInfo from "src/components/HeaderInfo/HeaderInfo";
+import styled from "styled-components";
 
 interface IProps {
   id: string;
   datetime: string;
 }
+
+const Title = styled.h2`
+  color: ${({ theme }: any) => theme.colors.primary};
+  background-color: ${({ theme }: any) => theme.colors.background};
+  border: 1px solid grey;
+  padding: 7px;
+  margin: 7px;
+`;
 
 export default function Page({ id, datetime }: IProps) {
   return (
@@ -26,9 +35,13 @@ export default function Page({ id, datetime }: IProps) {
       </header>
       <main className="Container">
         <div>
-          <h2>Brand {id}</h2>
+          <Title>Static page {id}</Title>
+          this title is styled component &uarr;
         </div>
-        <time>{datetime}</time>
+        <br />
+        <section>
+          This page was built at <time>{datetime}</time>
+        </section>
       </main>
     </div>
   );
