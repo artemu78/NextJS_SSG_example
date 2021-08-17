@@ -1,7 +1,10 @@
+import React, { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import styled from "styled-components";
+import { ThemeContext } from "src/contexts/theme";
+import cn from "classnames";
 
 const ProductBlock = styled.div`
   width: 100px;
@@ -19,10 +22,12 @@ const ProductBlock = styled.div`
 `;
 
 export default function Home() {
+  const { theme } = useContext(ThemeContext);
+  console.log({ theme });
   const productsList = new Array(20).fill(0, 0, 20).map((item, i) => {
     return (
       <Link key={i} href={`/p/${i + 1}`}>
-        <ProductBlock>Dynamic page {i + 1}</ProductBlock>
+        <div className={cn(styles.MainPage__product, styles.[`MainPage__${theme}`])}>Dynamic page {i + 1}</div>
       </Link>
     );
   });
@@ -47,7 +52,7 @@ export default function Home() {
         </div>
         <hr />
         <h2>Dynamic pages</h2>
-        <div className={styles.MainPage}>{productsList}</div>
+        <div className={cn(styles.MainPage)}>{productsList}</div>
         <hr />
         <h2>Static pages</h2>
         <div className={styles.MainPage}>{brandsList}</div>
