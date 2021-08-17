@@ -9,11 +9,11 @@ import "assets/global.css";
 import "assets/sfx.css";
 import type { AppProps } from "next/app";
 import { Theme } from "src/components/Theme";
-import { ThemeStore } from "src/contexts/theme";
+import { ThemeProvider } from "src/contexts/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeStore>
+    <ThemeProvider>
       <Theme>
         <Head>
           <title>Screwfix web mockup</title>
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </header>
         <Component {...pageProps} />
       </Theme>
-    </ThemeStore>
+    </ThemeProvider>
   );
 }
 export default MyApp;
