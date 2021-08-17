@@ -1,10 +1,5 @@
 import Head from "next/head";
 import { GetServerSidePropsContext } from "next";
-import HeaderHelp from "src/components/HeaderHelp/HeaderHelp";
-import HeaderMenu from "src/components/HeaderMenu/HeaderMenu";
-import HeaderGroups from "src/components/HeaderGroups/HeaderGroups";
-import HeaderLinks from "src/components/HeaderLinks/HeaderLinks";
-import HeaderInfo from "src/components/HeaderInfo/HeaderInfo";
 import styled from "styled-components";
 
 interface IProps {
@@ -26,13 +21,6 @@ export default function Page({ id, datetime }: IProps) {
       <Head>
         <title>Screwfix web mockup</title>
       </Head>
-      <header>
-        <HeaderHelp />
-        <HeaderMenu />
-        <HeaderGroups />
-        <HeaderLinks />
-        <HeaderInfo />
-      </header>
       <main className="Container">
         <div>
           <Title>Dynamic page #{id}</Title>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import styles from './HeaderMenu.module.scss';
 import cn from 'classnames';
+import Link from 'next/link';
 
 const HeaderMenu: React.FC = () => {
   useEffect(() => {
@@ -13,7 +14,9 @@ const HeaderMenu: React.FC = () => {
       style={{ zIndex: 10, backgroundColor: 'white', position: 'relative' }}
     >
       <div className={styles.HeaderMenu__content} data-testid="HeaderMenu">
-        <Image src="/images/screwfix-logo.svg" width="230" height="46" alt="Screwfix logo" />
+        <Link href="/">
+          <Image src="/images/screwfix-logo.svg" width="230" height="46" alt="Screwfix logo" />
+        </Link>
         <div className={styles.HeaderMenu__search}>
           <input
             type="text"

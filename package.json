@@ -9,7 +9,7 @@
     "debug": "cross-env NODE_ENV=production node debug.js"
   },
   "dependencies": {
-    "classnames": "2.3.1",
+    "classnames": "^2.3.1",
     "cross-env": "^7.0.3",
     "next": "10.2.3",
     "prettier": "2.3.1",

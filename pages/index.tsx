@@ -1,11 +1,5 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import HeaderHelp from "src/components/HeaderHelp/HeaderHelp";
-import HeaderMenu from "src/components/HeaderMenu/HeaderMenu";
-import HeaderGroups from "src/components/HeaderGroups/HeaderGroups";
-import HeaderLinks from "src/components/HeaderLinks/HeaderLinks";
-import HeaderInfo from "src/components/HeaderInfo/HeaderInfo";
 import styles from "./styles.module.scss";
 import styled from "styled-components";
 
@@ -41,23 +35,6 @@ export default function Home() {
   });
   return (
     <div>
-      <Head>
-        <title>Screwfix web mockup</title>
-        <link
-          rel="preload"
-          href="/assets/fonts/archivonarrow-bold-webfont.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        ></link>
-      </Head>
-      <header>
-        <HeaderHelp />
-        <HeaderMenu />
-        <HeaderGroups />
-        <HeaderLinks />
-        <HeaderInfo />
-      </header>
       <main className="Container">
         <div style={{ display: "flex" }}>
           <Image
