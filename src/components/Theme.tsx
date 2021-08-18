@@ -1,7 +1,7 @@
-import { createContext, useState, useContext } from 'react';
-import { ThemeStore, ThemeContext } from 'src/contexts/theme';
+import { useContext } from 'react';
+import { ThemeContext } from 'src/contexts/theme';
 import { ThemeProvider } from 'styled-components';
-const themes = {
+const themes: any = {
   light: {
     colors: {
       primary: 'rgb(46, 68, 78)',

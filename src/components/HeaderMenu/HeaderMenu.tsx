@@ -15,7 +15,9 @@ const HeaderMenu: React.FC = () => {
     >
       <div className={styles.HeaderMenu__content} data-testid="HeaderMenu">
         <Link href="/">
-          <Image src="/images/screwfix-logo.svg" width="230" height="46" alt="Screwfix logo" />
+          <a>
+            <Image src="/images/screwfix-logo.svg" width="230" height="46" alt="Screwfix logo" />
+          </a>
         </Link>
         <div className={styles.HeaderMenu__search}>
           <input
