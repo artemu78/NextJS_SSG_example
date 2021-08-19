@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import ReactDom from "react-dom";
+import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./styles.module.scss";
@@ -24,7 +23,13 @@ const ProductBlock = styled.div`
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
-  console.log({ theme });
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "production") {
+      const ReactDOM = require("react-dom");
+      const axe = require("@axe-core/react");
+      axe(React, ReactDOM, 1000);
+    }
+  }, []);
   const className = `MainPage__${theme}`;
   const productsList = new Array(20).fill(0, 0, 20).map((item, i) => {
     return (

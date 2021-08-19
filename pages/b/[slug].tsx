@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import { GetStaticPropsContext } from "next";
 import styled from "styled-components";
@@ -16,6 +17,11 @@ const Title = styled.h2`
 `;
 
 export default function Page({ id, datetime }: IProps) {
+  if (process.env.NODE_ENV !== "production") {
+    const axe = require("@axe-core/react");
+    const ReactDOM = require("react-dom");
+    axe(React, ReactDOM, 1000);
+  }
   return (
     <div>
       <Head>

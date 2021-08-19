@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Head from "next/head";
 import { GetServerSidePropsContext } from "next";
 import styled from "styled-components";
@@ -16,6 +17,14 @@ const Title = styled.h2`
 `;
 
 export default function Page({ id, datetime }: IProps) {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "production") {
+      const ReactDOM = require("react-dom");
+      const axe = require("@axe-core/react");
+      axe(React, ReactDOM, 1000);
+    }
+  }, []);
+
   return (
     <div>
       <Head>
